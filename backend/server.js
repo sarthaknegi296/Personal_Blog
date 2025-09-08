@@ -13,16 +13,7 @@ const PORT = process.env.PORT;
 const whitelist = process.env.FRONTEND_URL;
 
 const corsOptions = {
-  origin: function (origin, callback) {
-    // allow requests with no origin (like mobile apps or curl)
-    if (!origin) return callback(null, true);
-    if (whitelist.includes(origin)) {
-      return callback(null, true);
-    } else {
-      return callback(new Error("Not allowed by CORS"));
-    }
-  },
-  methods: ["GET", "POST", "PATCH", "DELETE"],
+  origin: [whitelist],
   credentials: true,
   optionsSuccessStatus: 200,
 };
