@@ -10,8 +10,6 @@ import authRouter from "./routes/auth.routes.js";
 const app = express();
 const PORT = process.env.PORT;
 
-const whiteList = [process.env.FRONTEND_URL];
-
 const whitelist = [process.env.FRONTEND_URL];
 
 const corsOptions = {

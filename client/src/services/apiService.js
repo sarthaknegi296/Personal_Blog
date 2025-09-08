@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 const token = localStorage.getItem('jwt');
 
 const VITE_API_URL = import.meta.env.VITE_API_URL;
